@@ -4,15 +4,15 @@ namespace App\Cutlery;
 
 class Spoon
 {
-    protected $scoops = 0;  // Property has to be 'protected' to be used in child classes
+    protected $scoops = 0;  // Property HAS to be 'protected' to be used in child class
 
-    public function scoop()
+    public function scoop(): Spoon
     {
         $this->scoops += 1;
         return $this;
     }
 
-    public function howManyScoops()
+    public function howManyScoops(): int
     {
         return $this->scoops;
     }
